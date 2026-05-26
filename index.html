@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I'm cool</title>
+  <style>
+    :root {
+      --bg-1: #0f1226;
+      --bg-2: #2a1a5e;
+      --bg-3: #ff3cac;
+      --text: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(135deg, var(--bg-1), var(--bg-2), var(--bg-3));
+      background-size: 300% 300%;
+      animation: shift 14s ease infinite;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+    @keyframes shift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    h1 {
+      font-size: clamp(3rem, 14vw, 10rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      text-shadow: 0 8px 40px rgba(0,0,0,0.35);
+    }
+    p {
+      margin-top: 1.5rem;
+      font-size: clamp(1rem, 2.2vw, 1.4rem);
+      opacity: 0.9;
+      max-width: 36rem;
+    }
+    .badge {
+      margin-top: 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .dot {
+      width: 0.5rem; height: 0.5rem; border-radius: 50%;
+      background: #00ff9d;
+      box-shadow: 0 0 12px #00ff9d;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>I&rsquo;m cool</h1>
+    <p>First site by Yanik &mdash; built from the terminal, pushed to GitHub, served by Cloudflare.</p>
+    <span class="badge"><span class="dot"></span> Live</span>
+  </main>
+</body>
+</html>
